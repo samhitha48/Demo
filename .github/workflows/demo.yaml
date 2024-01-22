@@ -28,4 +28,6 @@ jobs:
       #    images: samhitha8/demo
 
       - name: Push image to Docker Hub
-        run: docker push samhitha8/demo:latest
+        run: |
+           docker tag ping:latest samhitha8/demo:latest
+           docker push ping:latest samhitha8/demo:latest
