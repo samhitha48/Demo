@@ -32,6 +32,6 @@ jobs:
       - name: Push image to Docker Hub
         run: |
           docker push ping-app:latest
-          docker push samhitha8/demo:latest
+          docker push samhitha8/demo:ping-app
 
 
