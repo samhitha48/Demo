@@ -26,6 +26,6 @@ jobs:
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: samhitha8/demo
-          
+
       - name: Push image to Docker Hub
-        run: docker push samhitha8/demo
+        run: docker push samhitha8/demo:latest
