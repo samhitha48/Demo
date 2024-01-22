@@ -30,11 +30,6 @@ jobs:
         with:
           images: samhitha8/demo
 
-     - name: Debug Information
-          run: |
-	    echo "Current Directory: $(pwd)"
-	    echo "Shell Path: $(which bash)"
- 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
