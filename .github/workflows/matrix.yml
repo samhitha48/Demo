@@ -1,0 +1,29 @@
+name: Matrix
+
+on: [push]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [12, 14, 16]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Display OS and Node.js version
+        run: |
+          echo "Operating System: ${{ matrix.os }}"
+          echo "Node.js version: $(node -v)"
+
+      - name: Run Hello World
+        run: echo "Hello, World!"
